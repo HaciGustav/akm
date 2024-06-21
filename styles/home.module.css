@@ -1,0 +1,168 @@
+
+
+/*! COMMON */
+.border_effect{
+    display: inline-block;
+   position: relative;
+   cursor: default;
+  }
+  .border_effect::after {
+  content: "";
+  position:absolute;
+  width:100%;
+  transform: scaleX(0);
+  height: 5px;
+  bottom: 0;
+  left: 0;
+  background-color: #fb2056;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+  }
+  .border_effect:hover::after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  }
+  .title{
+    text-align: center;
+    font-size: var(--title-font-size);
+    font-family: var(--title-font-family);
+    padding: 0.5rem;
+    width: fit-content;
+    margin: auto;
+    text-transform: uppercase;
+  
+  }
+  
+  /*! ARTICLES STYLES */
+  .articles_container{
+      padding:2rem;
+      background-color:#eee;
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+    }
+    .quote{
+      display:flex;
+      justify-content:center;
+      align-items:strech;
+      position:relative;
+      min-height:20vh;
+      padding: 2rem;
+      
+    }
+    .quote_img{
+      max-width:5rem;
+    }
+  
+    .quote_open_wrapper{
+      display:flex;
+      align-items:flex-end;
+    }
+    .quote_text{
+      font-size:1.7rem;
+      /* max-width:60%; */
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align: center;
+      padding-inline:1rem;
+    }
+    .quote_close{
+      transform:rotate(180deg);
+  }
+  
+  
+  
+  
+  
+  /*! ARTICLECARDS STYLES */
+  .cards_container{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 90%;
+      margin: auto;
+      column-gap: 10px;
+      row-gap: 10px;
+      padding-inline: 2rem;
+  }
+  .card_container{
+      min-height:300px;
+      max-width: 350px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 8px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+     border-radius: 5px;
+     overflow: hidden;
+  }
+  
+  .img_wrapper{
+      width:100%;
+      
+  }
+  .card_img{
+      max-width: 100%;
+      max-height: 100%;
+  }
+  .card_info{
+      padding: 0.5rem;
+  }
+  .card_title{
+    text-transform: capitalize;
+  text-align: center;
+  }
+  
+  .card_text{
+  padding-inline: 10px;
+  
+  }
+  
+  
+  
+  
+  @media (max-width:400px) {
+    .quote{
+      padding: 0;
+    }
+    .articles_container{
+      padding: 0;
+    }
+    .quote_text{
+      font-size:10px;
+    }
+  }
+  
+  
+  @media (max-width:700px) {
+    .header_title{
+      font-size:2rem;
+    }
+    .quote{
+      padding: 1rem;
+    }
+    .articles_container{
+      padding: 0rem;
+    }
+    .quote_img{
+      max-width:3rem;
+    }   
+    .quote_text{
+      font-size:1.4rem;
+      padding-inline:0.5rem;
+    }
+  
+  
+    .cards_container{
+      max-width: 100%;
+    }   
+  
+  }
+  @media (max-width:1200px) {
+    .cards_container{
+      padding-inline: 1rem;
+    }  
+  
+  }
+  
+  

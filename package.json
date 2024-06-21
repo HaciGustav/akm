@@ -1,0 +1,24 @@
+{
+  "name": "fachverein",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.16",
+    "@mui/material": "^5.14.15",
+    "axios": "^1.6.7",
+    "bootstrap": "^5.3.2",
+    "firebase": "^10.8.0",
+    "next": "13.5.6",
+    "react": "^18",
+    "react-bootstrap": "^2.10.0",
+    "react-dom": "^18"
+  }
+}

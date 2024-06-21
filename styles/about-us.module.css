@@ -1,0 +1,27 @@
+.container{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 1rem;
+    padding-block: 4rem;
+    width: 80%;
+    margin: auto;
+  
+}
+
+.title{
+    font-size: 2.5rem;
+    color:#385982;
+    width: 100%;
+    padding-block: 1rem;
+}
+
+
+.paragraph{
+    width: 100%;
+    color: #737373;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    
+}

@@ -1,0 +1,74 @@
+/*? PROJECTS SECTION STYLES START */
+.section_container{
+    /* border:2px solid red; */
+    width: 90%;
+    padding-block: 2rem;
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap: 10px;
+    /* max-width: 900px; */
+    margin: 0 auto;
+
+}
+
+@media (max-width: 900px) {
+    .section_container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+@media (max-width: 500px) {
+  .section_container {
+    grid-template-columns:  1fr;
+  }
+}
+
+  
+
+
+/*? PROJECTS SECTION STYLES END */
+
+/*! ============================================================================================= */
+
+/*? CARD STYLES START */
+.card_container{
+    /* border:2px solid red; */
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+    height: fit-content;
+}
+.card_img{
+    max-width: 100%;
+}
+.card_info_wrapper{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.btn_readmore_wrapper{
+    width: 100%;
+}
+.btn_readmore{
+    color: aliceblue;
+    background-color:var(--main-color);
+    padding-block: 0.3rem;
+    padding-inline: 0.5rem;
+    border-radius: 5px;
+    text-align:center;
+    font-size: small;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.btn_readmore:hover{
+transform: scale(1.03);
+}
+
+
+/*? CARD STYLES END */
+
+/*! ============================================================================================= */
