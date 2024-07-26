@@ -24,16 +24,13 @@ const Card = ({ data }) => {
 
   return (
     <div className={styles.card_container}>
-      <img
-        className={styles.card_img}
-        src="./assets/header-images/projects.jpg"
-      />
+      <img className={styles.card_img} src={data.image} />
       <div className={styles.card_info_wrapper}>
-        <h2>Project Title</h2>
+        <h2>{data.title}</h2>
         <p>{description}</p>
         <div className={styles.btn_readmore_wrapper}>
           <span onClick={showDescription} className={styles.btn_readmore}>
-            {openDesc ? "Weniger" : "Mehr"} Lesen
+            {openDesc ? "Ausklappen" : "Mehr Lesen"}
           </span>
         </div>
       </div>

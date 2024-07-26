@@ -14,7 +14,7 @@ const navItems = [
   { name: "Aktivitäten & Projekte", url: "/projects" },
   { name: "Kurse", url: "/courses" },
   { name: "Über uns", url: "/about" },
-  { name: "Kontakt", url: "/contact" },
+  // { name: "Kontakt", url: "/contact" },
 ];
 
 const Navbar = ({ children }) => {

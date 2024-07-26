@@ -7,79 +7,29 @@ const EventsSection = () => {
 
   const cardInfos = [
     {
-      title: "lorem ipsum dolor sit amet",
-      text: "ASDASD im Merida e.V. . In unseren Räumlichkeiten gab es ein schönes leckeres Frühstücksbüffet mit einer tollen Austausch. Stadt",
-      img: "https://images.pexels.com/photos/16871608/pexels-photo-16871608/free-photo-of-geast-blatter-baum-gebaude-aussen.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      title: "Einen besonderen Dank an das Bundesheer für euren Einsatz!",
+      text: "Um vom Herzen für den Einsatz der SoldatInnen die aus der Türkei zurück sind zu danken, haben wir sie am Hauptplatz in Korneuburg mit Blumen empfangen. Wir bedanken uns vom ganzen Herzen für den Einsatz bei der Bergung und Rettung der Erdbebenopfer.",
+      img: "/assets/posts/2870691_n.jpg",
     },
     {
-      title: "lorem ipsum dolor sit amet",
-      text: "cxvxycvxyn im Merida e.V. . In unseren Räumlichkeiten gab es ein schönes leckeres Frühstücksbüffet mit einer tollen Austausch. Stadt",
-      img: "https://images.pexels.com/photos/5940278/pexels-photo-5940278.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      title: "Kulturhaus Brotfabrik Samstagatelier!",
+      text: "Wir waren mit 11 Jugendlichen im Alter von 11-13 Jahren in der Kulturhaus Brotfabrik im Samstagatalier! Werken ist ein Handwerksberuf, einige von uns sind sehr talentiert darin! Sie machten sehr gerne Keramik und Holzdruck. ",
+      img: "/assets/posts/3164414_n.jpg",
     },
     {
-      title: "lorem ipsum dolor sit amet",
-      text: "döklfgjasd im Merida e.V. . In unseren Räumlichkeiten gab es ein schönes leckeres Frühstücksbüffet mit einer tollen Austausch. Stadt",
-      img: "https://images.pexels.com/photos/19908899/pexels-photo-19908899/free-photo-of-landschaft-sand-wuste-trocken.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      title: "Spendenaktion für die Erdbebengebiete Türkei und Syrien",
+      text: "Gestern waren wir auf der Mariahilferstraße, es hat eine Spendenaktion für die Erdbebengebiete Türkei und Syrien stattgefunden. Unsere Jugendlichen haben Backwaren vorbereitet und sie zur Verfügung gestellt, damit Menschen beliebig viel spenden können. An dieser Stelle möchten wir uns an die Stadt Wien und unseren Freiwilligen bedanken.",
+      img: "/assets/posts/5396337_n.jpg",
     },
     {
-      title: "lorem ipsum dolor sit amet",
-      text: "poxcpvo im Merida e.V. . In unseren Räumlichkeiten gab es ein schönes leckeres Frühstücksbüffet mit einer tollen Austausch. Stadt",
-      img: "https://images.pexels.com/photos/18132120/pexels-photo-18132120/free-photo-of-wahrzeichen-skyline-ozean-australien.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      title: "Seminar zur Persönlichkeitsentwicklung für jungen",
+      text: "Es war ein wunderbares und sehr anregendes Seminar zur Persönlichkeitsentwicklung für jungen. An unserem Seminar hatten wir viele junge Teilnehmer im Alter zwischen 13 und 18 Jahren. Gab es auch leckere Leckereien!",
+      img: "/assets/posts/5774271_n.jpg",
     },
     {
-      title: "lorem ipsum dolor sit amet",
-      text: "586868 im Merida e.V. . In unseren Räumlichkeiten gab es ein schönes leckeres Frühstücksbüffet mit einer tollen Austausch. Stadt",
-      img: "https://images.pexels.com/photos/14781473/pexels-photo-14781473.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-    },
-    {
-      title: "lorem ipsum dolor sit amet",
-      text: "kzujzu im Merida e.V. . In unseren Räumlichkeiten gab es ein schönes leckeres Frühstücksbüffet mit einer tollen Austausch. Stadt",
-      img: "https://images.pexels.com/photos/9316207/pexels-photo-9316207.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-    },
-    {
-      title: "lorem ipsum dolor sit amet",
-      text: "rtzrtz im Merida e.V. . In unseren Räumlichkeiten gab es ein schönes leckeres Frühstücksbüffet mit einer tollen Austausch. Stadt",
-      img: "https://cdn.psychologytoday.com/sites/default/files/styles/article-inline-half-caption/public/field_blog_entry_images/2020-02/adobestock_144255497.jpeg?itok=7Rt-bVOy",
-    },
-    {
-      title: "lorem ipsum dolor sit amet",
-      text: "io.o.io im Merida e.V. . In unseren Räumlichkeiten gab es ein schönes leckeres Frühstücksbüffet mit einer tollen Austausch. Stadt",
-      img: "https://images.pexels.com/photos/18821921/pexels-photo-18821921/free-photo-of-feld-tiere-pferde-herde.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-    },
-    {
-      title: "lorem ipsum dolor sit amet",
-      text: "erterterter im Merida e.V. . In unseren Räumlichkeiten gab es ein schönes leckeres Frühstücksbüffet mit einer tollen Austausch. Stadt",
-      img: "https://images.pexels.com/photos/19915879/pexels-photo-19915879/free-photo-of-kalt-schnee-holz-landschaft.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-    },
-    {
-      title: "lorem ipsum dolor sit amet",
-      text: "Begegnungstreffen im Merida e.V. . In unseren Räumlichkeiten gab es ein schönes leckeres Frühstücksbüffet mit einer tollen Austausch. Stadt",
-      img: "https://images.pexels.com/photos/19748403/pexels-photo-19748403/free-photo-of-stadt-ferien-strasse-sommer.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-    },
-    {
-      title: "lorem ipsum dolor sit amet",
-      text: "Begegnungstreffen im Merida e.V. . In unseren Räumlichkeiten gab es ein schönes leckeres Frühstücksbüffet mit einer tollen Austausch. Stadt",
-      img: "https://images.pexels.com/photos/11608639/pexels-photo-11608639.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-    },
-    {
-      title: "lorem ipsum dolor sit amet",
-      text: "Begegnungstreffen im Merida e.V. . In unseren Räumlichkeiten gab es ein schönes leckeres Frühstücksbüffet mit einer tollen Austausch. Stadt",
-      img: "https://images.pexels.com/photos/19960223/pexels-photo-19960223/free-photo-of-meer-stadt-wasser-hafen.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-    },
-    {
-      title: "lorem ipsum dolor sit amet",
-      text: "Begegnungstreffen im Merida e.V. . In unseren Räumlichkeiten gab es ein schönes leckeres Frühstücksbüffet mit einer tollen Austausch. Stadt",
-      img: "https://images.pexels.com/photos/19895853/pexels-photo-19895853/free-photo-of-meer-wasser-ozean-sommer.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-    },
-    {
-      title: "lorem ipsum dolor sit amet",
-      text: "Begegnungstreffen im Merida e.V. . In unseren Räumlichkeiten gab es ein schönes leckeres Frühstücksbüffet mit einer tollen Austausch. Stadt",
-      img: "https://images.pexels.com/photos/17758065/pexels-photo-17758065/free-photo-of-meer-himmel-mann-strand.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-    },
-    {
-      title: "lorem ipsum dolor sit amet",
-      text: "Begegnungstreffen im Merida e.V. . In unseren Räumlichkeiten gab es ein schönes leckeres Frühstücksbüffet mit einer tollen Austausch. Stadt",
-      img: "https://images.pexels.com/photos/17504061/pexels-photo-17504061/free-photo-of-stadt-pelikan-menschen-strasse.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      title: "Tag der Menschenrechte",
+      text: "Auch wir haben heuer zum internationalen Tag der Menschenrechte mit dem Friede Institut zusammen an einer Spendenaktion der Caritas in Wien teilgenommen. Wir danken herzlichst unseren Freiwilligen, die uns dabei unterstützt und geholfen haben.",
+      img: "/assets/posts/7091116_n.jpg",
     },
   ];
   const handleLoadMore = () => {
