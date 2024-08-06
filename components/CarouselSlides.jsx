@@ -1,16 +1,20 @@
+import useApiCalls from "@/hooks/useApiCalls";
 import { Box } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 
 const CarouselSlides = () => {
   const [index, setIndex] = useState(0);
+  const [slides, setSlides] = useState([]);
+
   const handleSelect = (selectedIndex) => {
     setIndex(selectedIndex);
   };
+  const { getAnnouncements } = useApiCalls();
 
-  const slides = [
-    "https://www.anadolukultur.at/wp-content/uploads/2023/09/WhatsApp-Image-2023-09-06-at-21.50.59.jpeg",
-  ];
+  useEffect(() => {
+    getAnnouncements().then((res) => setSlides(res));
+  }, []);
 
   return (
     <Carousel
@@ -23,7 +27,7 @@ const CarouselSlides = () => {
       activeIndex={index}
       onSelect={handleSelect}
     >
-      {slides.map((image, i) => (
+      {slides.map((slide, i) => (
         <Carousel.Item
           style={{
             height: "100%",
@@ -50,7 +54,7 @@ const CarouselSlides = () => {
                 boxShadow:
                   "rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 1) 0px 18px 36px -18px inset",
               }}
-              src={image}
+              src={slide?.image}
             />
           </Box>
         </Carousel.Item>

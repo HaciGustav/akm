@@ -2,11 +2,19 @@ import Navbar from "@/components/navbar/Navbar";
 import "@/styles/globals.css";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useEffect, useMemo, useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "../styles/bootstrap.min.css";
+import store from "@/redux/app/store";
+import { ToastContainer } from "react-toastify";
+import { Provider } from "react-redux";
+import { useRouter } from "next/router";
+import Loading from "@/components/Loading";
+import SessionObserver from "@/components/SessionObserver";
 const theme = createTheme();
 
 export default function App({ Component, pageProps }) {
   const [mode, setMode] = useState("light");
+
+  const router = useRouter();
 
   const toggleTheme = () => {
     setMode(mode === "dark" ? "light" : "dark");
@@ -62,12 +70,18 @@ export default function App({ Component, pageProps }) {
   }, []);
 
   return (
-    <>
+    <Provider store={store}>
+      <SessionObserver />
       <ThemeProvider theme={theme}>
-        <Navbar>
-          <Component {...pageProps} />
-        </Navbar>
+        <Loading />
+        {router.asPath !== "/login" && (
+          <Navbar>
+            <Component {...pageProps} />
+          </Navbar>
+        )}
+        {router.asPath === "/login" && <Component {...pageProps} />}
+        <ToastContainer />
       </ThemeProvider>
-    </>
+    </Provider>
   );
 }

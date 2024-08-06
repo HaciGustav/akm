@@ -9,6 +9,10 @@ import CustomDrawer from "./navbar_elements/Drawer";
 import Footer from "../Footer";
 import { Button } from "@mui/material";
 import Link from "next/link";
+import { useDispatch, useSelector } from "react-redux";
+import LogoutIcon from "@mui/icons-material/Logout";
+import { setSessionValidity } from "@/redux/slices/settingsSlice";
+import { Router, useRouter } from "next/router";
 
 const navItems = [
   { name: "Aktivitäten & Projekte", url: "/projects" },
@@ -19,8 +23,17 @@ const navItems = [
 
 const Navbar = ({ children }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const dispatch = useDispatch();
+  const isAdmin = useSelector((state) => state.settings.isSessionValid);
+  const router = useRouter();
+
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
+  };
+  const logout = () => {
+    dispatch(setSessionValidity({ isValid: false }));
+    localStorage.removeItem("user");
+    router.push("/");
   };
 
   return (
@@ -71,6 +84,36 @@ const Navbar = ({ children }) => {
                 </Link>
                 // <DropdownMenu key={item} btnName={item} />
               ))}
+              {isAdmin && (
+                <>
+                  <Link
+                    style={{ textDecoration: "none", height: "100%" }}
+                    href={"/admin"}
+                  >
+                    <Button
+                      variant="text"
+                      sx={{
+                        width: "100%",
+                        height: "100%",
+                        display: "flex",
+                        color: "#0008",
+                        cursor: "pointer",
+                        transition: "all 1s ease out",
+                        fontSize: "0.8rem",
+                        paddingInline: "15px",
+                        "&:hover": {
+                          backgroundColor: "#38598250",
+                        },
+                      }}
+                    >
+                      Admin
+                    </Button>
+                  </Link>
+                  <IconButton onClick={logout} aria-label="logout">
+                    <LogoutIcon />
+                  </IconButton>
+                </>
+              )}
             </Box>
             <IconButton
               aria-label="open drawer"
@@ -84,9 +127,11 @@ const Navbar = ({ children }) => {
         </AppBar>
         <nav>
           <CustomDrawer
+            isAdmin={isAdmin}
             handleDrawerToggle={handleDrawerToggle}
             navItems={navItems}
             mobileOpen={mobileOpen}
+            logout={logout}
           />
         </nav>
       </Box>

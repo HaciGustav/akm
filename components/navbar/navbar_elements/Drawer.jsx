@@ -3,18 +3,24 @@ import {
   Button,
   Divider,
   Drawer,
+  IconButton,
   List,
   ListItem,
   ListItemButton,
   ListItemText,
 } from "@mui/material";
-import Image from "next/image";
 import React from "react";
 import DropdownMenu from "./DropdownMenu";
 import Link from "next/link";
-
+import LogoutIcon from "@mui/icons-material/Logout";
 const drawerWidth = 240;
-const CustomDrawer = ({ handleDrawerToggle, navItems, mobileOpen }) => {
+const CustomDrawer = ({
+  handleDrawerToggle,
+  navItems,
+  mobileOpen,
+  isAdmin,
+  logout,
+}) => {
   return (
     <Drawer
       variant="temporary"
@@ -32,7 +38,11 @@ const CustomDrawer = ({ handleDrawerToggle, navItems, mobileOpen }) => {
       }}
     >
       <Box sx={{ textAlign: "center" }}>
-        <Image src="/assets/logo.jpg" alt="Logo" width={200} height={100} />
+        <img
+          src="./assets/logo.jpg"
+          alt="Logo"
+          style={{ width: 200, height: 200 }}
+        />
         <Divider />
         <List sx={{ rowGap: "10px" }}>
           {navItems.map((item) => (
@@ -63,6 +73,43 @@ const CustomDrawer = ({ handleDrawerToggle, navItems, mobileOpen }) => {
             </Link>
             // <DropdownMenu key={item} btnName={item} />
           ))}
+          {isAdmin && (
+            <>
+              <Link
+                onClick={handleDrawerToggle}
+                style={{ textDecoration: "none", height: "100%" }}
+                href={"/admin"}
+              >
+                <Button
+                  variant="text"
+                  sx={{
+                    width: "100%",
+                    height: "100%",
+                    display: "flex",
+                    color: "#0008",
+                    cursor: "pointer",
+                    transition: "all 1s ease out",
+                    fontSize: "0.8rem",
+                    paddingInline: "15px",
+                    "&:hover": {
+                      backgroundColor: "#38598250",
+                    },
+                  }}
+                >
+                  Admin
+                </Button>
+              </Link>
+              <IconButton
+                onClick={() => {
+                  logout();
+                  handleDrawerToggle();
+                }}
+                aria-label="logout"
+              >
+                <LogoutIcon />
+              </IconButton>
+            </>
+          )}
           {/* {navItems.map((item) => (
             <ListItem key={item.name} disablePadding>
               <DropdownMenu key={item} btnName={item.name} />

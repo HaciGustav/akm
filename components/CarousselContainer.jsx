@@ -18,12 +18,12 @@ const CarousselContainer = () => {
   const HEIGHT = "70vh";
 
   const slides = [
-    "/assets/slides/1.jpg",
-    "/assets/slides/2.jpg",
-    "/assets/slides/3.jpg",
-    "/assets/slides/1.jpg",
-    "/assets/slides/3.jpg",
-    "/assets/slides/2.jpg",
+    "./assets/slides/1.jpg",
+    "./assets/slides/2.jpg",
+    "./assets/slides/3.jpg",
+    "./assets/slides/1.jpg",
+    "./assets/slides/3.jpg",
+    "./assets/slides/2.jpg",
   ];
   const intervalDuration = 5000;
   const handlePrev = () => {

@@ -3,7 +3,14 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { Link } from "@mui/material";
+import { useRouter } from "next/router";
 const Footer = () => {
+  const router = useRouter();
+
+  const handleNavToLogin = (e) => {
+    if (e.detail === 3) router.push("/login");
+  };
+
   return (
     <footer
       style={{
@@ -29,7 +36,7 @@ const Footer = () => {
             width: "50%",
           }}
         >
-          <img style={{ width: "50%" }} src="./assets/Logo_footer.png" alt="" />
+          <img style={{ width: "50%" }} src="/assets/Logo_footer.png" alt="" />
           <div style={{ color: "#fff", display: "flex", columnGap: "8px" }}>
             <Link
               sx={{
@@ -114,7 +121,7 @@ const Footer = () => {
             }}
           >
             <img
-              src="./assets/location.svg"
+              src="/assets/location.svg"
               style={{ width: "2rem", height: "2rem" }}
               alt=""
             />
@@ -144,8 +151,9 @@ const Footer = () => {
           fontWeight: "lighter",
         }}
       >
-        Copyright © {new Date().getFullYear()} AKM - Alle Kulturen Miteinander |
-        Alle Rechte vorbehalten.
+        <span onClick={handleNavToLogin}>Copyright</span> ©{" "}
+        {new Date().getFullYear()} AKM - Alle Kulturen Miteinander | Alle Rechte
+        vorbehalten.
       </p>
     </footer>
   );

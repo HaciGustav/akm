@@ -15,7 +15,10 @@ const EventCard = ({ source, title, text, index, cardArr }) => {
         index={index}
       />
       <Grid
-        onClick={() => setOpenModal(true)}
+        onClick={() => {
+          setOpenModal(true);
+          console.log(index);
+        }}
         item
         sm={6}
         md={6}

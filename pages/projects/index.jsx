@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import Card from "@/components/projects-comps/Card";
+import Card from "@/components/Card";
 import ProjectsSection from "@/components/projects-comps/ProjectsSection";
 import React from "react";
 

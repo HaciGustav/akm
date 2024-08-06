@@ -6,24 +6,27 @@ const Card = ({ data }) => {
 
   const showDescription = () => {
     if (!openDesc) {
-      setDescription(data?.desc);
+      setDescription(data?.text);
       setOpenDesc(true);
     } else {
-      setDescription(data?.desc?.substring(0, 250) + "...");
+      setDescription(data?.text?.substring(0, 250) + "...");
       setOpenDesc(false);
     }
   };
 
   useEffect(() => {
     const tempDesc =
-      data?.desc?.length > 250
-        ? data?.desc?.substring(0, 250) + "..."
-        : data?.desc;
+      data?.text?.length > 250
+        ? data?.text?.substring(0, 250) + "..."
+        : data?.text;
     setDescription(tempDesc);
   }, [data]);
 
   return (
-    <div className={styles.card_container}>
+    <div
+      className={styles.card_container}
+      style={{ justifyContent: "flex-start" }}
+    >
       <img className={styles.card_img} src={data.image} />
       <div className={styles.card_info_wrapper}>
         <h2>{data.title}</h2>

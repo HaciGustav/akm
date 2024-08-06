@@ -1,7 +1,6 @@
 import styles from "@/styles/header.module.css";
 
 const Header = ({ page }) => {
-  console.log(page);
   const checkPage = () => {
     switch (page) {
       case "home":

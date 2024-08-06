@@ -2,7 +2,6 @@ import Box from "@mui/material/Box";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import { IconButton } from "@mui/material";
-import Image from "next/image";
 import Modal from "@mui/material/Modal";
 import { useEffect, useMemo, useState } from "react";
 import { Paper } from "@mui/material";
@@ -28,7 +27,6 @@ export default function EventModal({
 }) {
   const [imageIndex, setImageIndex] = useState(index);
   const [path, setPath] = useState("");
-  const handleOpen = () => setOpenModal(true);
   const handleClose = () => setOpenModal(false);
 
   const style = useMemo(() => ({
@@ -89,12 +87,10 @@ export default function EventModal({
   const handleNextImage = () => {
     let total = cardArr.length - 1;
     if (imageIndex < total) {
-      // let temp = imageIndex
       setImageIndex(imageIndex + 1);
     } else {
       setImageIndex(0);
     }
-    // setIsLoading(true);
   };
   const handlePrevImage = () => {
     let total = cardArr.length - 1;
@@ -103,14 +99,14 @@ export default function EventModal({
     } else {
       setImageIndex(total);
     }
-    // setIsLoading(true);
   };
   useEffect(() => {
-    setPath(cardArr[imageIndex]?.img);
+    setPath(cardArr[imageIndex]?.image);
   }, [imageIndex]);
+
   useEffect(() => {
-    setPath(cardArr[index]?.img);
-  }, []);
+    if (!openModal) setImageIndex(index);
+  }, [openModal]);
 
   return (
     <>
